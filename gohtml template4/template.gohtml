@@ -1,0 +1,10 @@
+<html>
+    <head>Learn GoLang!</head>
+    <body>
+        <ul>
+            {{range $key, $elem :=  .}}
+            <li>{{$key}}'s Capital is {{$elem}}</li>
+            {{end}}
+        </ul>
+    </body>
+</html>
