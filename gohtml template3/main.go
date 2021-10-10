@@ -6,6 +6,8 @@ import (
 	"text/template"
 )
 
+//Html-tise content of template
+
 func main() {
 
 	var slice1 = []string{"Ade", "Ola", "Ayo", "Odun", "Ire", "Osu"}
