@@ -1,9 +1,9 @@
 package main
 
 import (
-	log
-	os
-	texttemplate
+	"log"
+	"os"
+	"text/template"
 )
 
 type Person struct {
@@ -11,15 +11,14 @@ type Person struct {
 }
 
 func main() {
-	 fmt.Println(Hy)
-	name = Person{Abdul}
+	name := Person{"Abdul Console"}
 
-	template1 = template.New(test)
+	template1 := template.New("test")
 
-	template1, err = template1.Parse(Hello World {{.Name}})
+	template1, err := template1.Parse("Hello World {{.Name}}")
 
 	if err != nil {
-		log.Fatal(Parse , err)
+		log.Fatal(err)
 	}
 	template1.Execute(os.Stdout, name)
 }
