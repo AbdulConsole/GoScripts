@@ -11,7 +11,9 @@ type Person struct {
 	Hobbies []string
 }
 
-const data = "The name of the person is {{.Name}}.{{range .Hobbies}}He likes {{.}}{{end}}"
+const data = `{{$name := .Name}}
+	{{range .Hobbies}} {{$name}} likes {{.}}
+	{{end}}`
 
 func main() {
 
