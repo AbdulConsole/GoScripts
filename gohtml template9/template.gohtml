@@ -1,0 +1,24 @@
+<html>
+    <head>Learn GoLang!</head>
+    <body>
+        <ul>
+            {{range .}}
+                {{if .Name}}
+                    <li>Student Name is {{str1 .Name}} and {{.Pronoun}} grade of {{str2 .Grade}}</li>
+                {{end}}
+            {{end}}
+
+            {{if .}}
+                {{.}}
+            {{end}}
+
+            {{range .}}
+                Hello {{.Name}}
+            {{end}}
+
+            {{range .}}
+                {{if .Name}}Hello {{.Name}}{{end}}
+            {{end}}
+        </ul>
+    </body>
+</html>
