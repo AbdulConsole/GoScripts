@@ -1,0 +1,61 @@
+<html>
+    <head>Learn GoLang!</head>
+    <body>
+        <ul>
+            {{range .}}
+                {{if .Name}}
+                    <li>Student Name is {{str1 .Name}} and {{.Pronoun}} grade of {{str2 .Grade}}</li>
+                {{end}}
+            {{end}}
+
+            {{if .}}
+                {{.}}
+            {{end}}
+
+            {{range .}}
+                Hello {{.Name}}
+            {{end}}
+
+            {{range .}}
+                {{if and .Name .Member}}Hello {{.Pronoun}}
+                    {{else}} No Data Available
+                {{end}}
+            {{end}}
+
+            {{range .}}
+                {{if or .Name .Member}} Hey {{.Pronoun}}
+                    {{else}} No Data Available
+                {{end}}
+            {{end}}
+            {{range .}}
+                {{if .Member}} {{.Name}} is a Member
+                {{else if .Temporarymember}} {{.Name}} is a Temporary Member
+                {{else}} {{.Name}} is not a member at all
+                {{end}}
+            {{end}}
+
+            {{range .}}
+                {{if .Num1}}
+                    {{if gt .Num1 .Num2}}
+                        Num1 greater than Num2
+                    {{end}}
+                    {{if lt .Num1 .Num2}}
+                        Num1 is less than Num2
+                    {{end}}
+
+                    {{if lt .Num1 100}}
+                        Num1 is less than 100
+                    {{end}}
+
+                    {{if gt .Num1 100}}
+                        Num1 is greater than 100
+                    {{end}}
+                    
+                    {{if eq .Num1 .Num2}}
+                        Num1 is equal to Num2
+                    {{end}}
+                {{end}}
+            {{end}}
+        </ul>
+    </body>
+</html>
